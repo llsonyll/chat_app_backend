@@ -29,3 +29,5 @@ server.listen(process.env.PORT, (err) => {
 
 // Mis Rutas > Middlewares (?)
 app.use('/api/login', require('./routes/auth'));
+app.use('/api/usuarios', require('./routes/usuarios'));
+

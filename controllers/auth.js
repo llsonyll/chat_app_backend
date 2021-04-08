@@ -89,14 +89,12 @@ const renewToken = async (req, res = response) => {
 
   // uid
   const uid = req.uid;
-
   if (!uid) {
     return res.status(400).json({
       ok: false,
       msg: 'id invalido'
     });
   }
-
   // generar un nuevo JWT
   const token = await generarJWT(uid);
 
